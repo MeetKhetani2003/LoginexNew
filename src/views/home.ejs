@@ -30,8 +30,8 @@
           <h3><%= server.name %></h3>
           <p><%= server.region %></p>
           <p><%= server.cpu %> • <%= server.ram %> • <%= server.storage %></p>
-          <p class="price">$<%= server.priceMonthly %>/30 days</p>
-          <a class="btn ghost" href="/rent/<%= server._id %>">Rent</a>
+          <p class="price">$<%= server.price_monthly %>/30 days</p>
+          <a class="btn ghost" href="/rent/<%= server.id %>">Rent</a>
         </article>
       <% }) %>
       <% if (servers.length === 0) { %><p>Add server specs from the admin page.</p><% } %>

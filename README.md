@@ -11,11 +11,6 @@ Premium-style marketing website + lightweight rental platform for Loginex.
   - Sends email reminder 3 days before expiry.
   - Expires rentals after 30 days and returns stock to pool.
 
-## Stack
-- Express + EJS
-- MongoDB + Mongoose
-- Node Cron + Nodemailer
-
 ## Run locally
 ```bash
 npm install
@@ -29,5 +24,5 @@ Set an admin key, then access:
 
 Environment variables:
 - `ADMIN_KEY`
-- `MONGODB_URI` (example: `mongodb://127.0.0.1:27017/loginex`)
+- `BASE_URL`
 - `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `EMAIL_FROM`
