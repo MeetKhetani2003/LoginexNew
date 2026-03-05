@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loginex - Premium Global Infrastructure</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">LOGINEX</div>
+    <nav>
+      <a href="/servers">Servers</a>
+      <a href="/blog">Blog</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">GLOBAL SCALING ROADMAP</p>
+    <h1>Canada live. India + Singapore coming next.</h1>
+    <p>Premium VPS, Minecraft nodes, web hosting and storage at startup-friendly pricing with enterprise polish.</p>
+    <a class="btn" href="/servers">Explore server inventory</a>
+  </section>
+
+  <section class="section">
+    <h2>Available Servers</h2>
+    <div class="grid">
+      <% servers.forEach(server => { %>
+        <article class="card">
+          <h3><%= server.name %></h3>
+          <p><%= server.region %></p>
+          <p><%= server.cpu %> • <%= server.ram %> • <%= server.storage %></p>
+          <p class="price">$<%= server.priceMonthly %>/30 days</p>
+          <a class="btn ghost" href="/rent/<%= server._id %>">Rent</a>
+        </article>
+      <% }) %>
+      <% if (servers.length === 0) { %><p>Add server specs from the admin page.</p><% } %>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Latest from Blog</h2>
+    <div class="grid">
+      <% blogs.forEach(blog => { %>
+        <article class="card">
+          <h3><%= blog.title %></h3>
+          <p><%= blog.content.slice(0, 150) %>...</p>
+          <small>By <%= blog.author %></small>
+        </article>
+      <% }) %>
+      <% if (blogs.length === 0) { %><p>No posts yet. Your blogger can publish from admin.</p><% } %>
+    </div>
+  </section>
+</body>
+</html>

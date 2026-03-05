@@ -1,0 +1,9 @@
+<!doctype html>
+<html><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Loginex Blog</title><link rel="stylesheet" href="/styles.css" /></head>
+<body><header class="nav"><div class="brand">LOGINEX</div><nav><a href="/">Home</a><a href="/servers">Servers</a></nav></header>
+<section class="section"><h1>Blog</h1>
+<% blogs.forEach(blog => { %>
+<article class="card"><h3><%= blog.title %></h3><small><%= blog.author %> • <%= new Date(blog.createdAt).toDateString() %></small><p><%= blog.content %></p></article>
+<% }) %>
+<% if (blogs.length === 0) { %><p>No blog posts yet.</p><% } %></section></body></html>

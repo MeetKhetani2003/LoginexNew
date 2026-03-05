@@ -1,0 +1,13 @@
+<!doctype html>
+<html><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rent <%= server.name %></title><link rel="stylesheet" href="/styles.css" /></head>
+<body><section class="section narrow"><h1>Rent <%= server.name %></h1><p><%= server.region %> • $<%= server.priceMonthly %>/30 days</p>
+<form method="POST" class="card form">
+  <label>Name<input type="text" name="customerName" required /></label>
+  <label>Email<input type="email" name="customerEmail" required /></label>
+  <button class="btn" type="submit">Complete Purchase</button>
+</form>
+<p class="tiny">Rental is active for 30 days. Expiry reminder email is sent before expiration.</p>
+<p class="tiny">Need custom node? contact loginex.ca</p>
+<a href="/servers">← back to servers</a>
+</section></body></html>
